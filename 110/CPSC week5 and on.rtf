@@ -1,0 +1,211 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww15760\viewh12600\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\b\fs24 \cf0 \ul \ulc0 \
+\
+\
+OCT 4th\
+\
+review:
+\b0 \ulnone \
+\
+\
+\ul type comment:\ulnone \
+self-reference (SR)\
+reference to T (R )\
+\
+\ul template:\
+\ulnone natural recursion\
+call fn for T\
+\
+\ul final function:\ulnone \
+recursion\
+helper call\
+\
+FUNCTION DESIGN IS DETERMINED BY DATA DESIGN\
+\
+\
+
+\b \ul :::::NEW:::::\
+\
+
+\b0 \ulnone 0 ~ empty\
+add1 ~ cons\
+sub1~ rest\
+(add1 (add1 0)) => 2\
+(sub1 (sub1 (add1(add1 (add1 0))))) => 1 \
+\
+SEE week-05-a-nat.rkt\
+SEE natural-starter\
+\
+- Key point is that Data Def. decides how to numbers are represented. We want to show you that all data we work with are subject to interpretation, no such thing as a primitive data.\
+\
+- Now we're going to pretend that dr. racket doesn't have primitive types of numbers or operators\
+\
+SEE new-numerals-starter\
+	- this file includes the "add variable" method\
+\
+\
+480 - (.619)484.7\
+\
+300.0293\
+\
+\
+
+\b \ul OCT 9th
+\b0 \ulnone \
+\
+\
+arrange-balls-cp-5 rkt\
+RULES FOR HELPERS\
+\
+adding additional parameters\
+	- in this case (insert-ball) the parameter is compound rather than atomic\
+\
+- ball<=? is rule D\
+\
+- making rain filtered (starter/final): GO THROUGH STARTER\
+(define (next-drops old)\
+	(onscreen-only (tick-drop lod)))\
+\
+\
+
+\b \ul OCT 11th
+\b0 \ulnone \
+\
+- LIST NOTATION, BST\
+\
+	- sort data within list to make search more efficient\
+	- BST only 2 branches per node\
+	- long grows more slowly than n/2, thats why its faster\
+	- tree node root\
+	- "left child" left branch\
+- BSTs need data components, plus 2 more pointing to left and right child\
+- trees are arbitrary sized, need self-ref data def\
+- bst-starter\
+\
+
+\b \ul OCT 16th
+\b0 \ulnone \
+\
+- arbitrary-arity trees\
+- MR ARROW\
+- arbitrary-arity starter\
+\
+- MR cycle in data def, we lock the templates together and treat them as a single unit.\
+\
+\
+
+\b \ul OCT 23rd
+\b0 \ulnone \
+\
+- local: switch to intermediate student\
+- lexical scoping\
+	- top level defines can be used in local, but local can redefine the variables within the box\
+	- boxes are nested\
+	\
+- global scope, entire local, and within function body\
+- intuitive way, lex scope way, and evaluation rules (drracket)\
+- renaming+lifting\
+	- renames the variable, remove the local (steppers shows this\
+- 3 ways to use local:\
+	- encapsulation\
+\
+- encamp starter, avoid recoup starter\
+\
+- ENCAPSULATION / AVOID REPEATED COMPUTATION / NAME INTERMEDIATE VALUES\
+\
+- ARC: have to use local in one branch of cond, not outside\
+\
+
+\b \ul OCT 25th\
+\
+
+\b0 \ulnone - week8aabsreview / hof starter\
+- lecture notes week8d end describes abstract purpose etc\
+- HOMEWORK do cleanup starter\
+- create the abstract sig for map2 (in hofstarter)\
+- HOMEWORK create abstract signature for filter2 (hofstart)\
+- abstract from template starter / \
+- lecture file week8e (folder sigs, local)\
+- \
+\
+\
+
+\b \ul OCT 30th
+\b0 \ulnone \
+\
+- TODO:    - more built-in funks\
+		- closures\
+		- more building abstract fns from templates\
+- using-builtins starter\
+	- built in abstract functions on exam sheet \
+	- when wondering what abstract function to use, match sig to abstract sig (eg (listofImage)->(listofNatural) ==> abstr. #3\
+		- get rest of sig from that (eg (x->y)===> (image->natural)  -----(HIGHER ORDER FUNCTION: function consumes function)\
+		- all higher order functions are functions themselves\
+	- "sum all naturals" function: composition of functions [use (build-list (identity)) and (foldr(+))]\
+- making-rain pre starter\
+\
+- abstract functions and closures starter\
+	- cant just edit filter template to include the threshhold parameter for bigger, so use local\
+\
+- abs from templates 2 starter 8h\
+\
+
+\b \ul NOV 1st\
+\
+
+\b0 \ulnone - WEEK 9: TO-DO --->> \
+	- templates for: generative recursion, backtracking\
+	- template combination (next class)\
+	- termination arguments\
+	- videos (3 online)\
+\
+- FRACTALS (fractals starter 9a)\
+	- go from base-case, then add one (check-expects)\
+	- CHECK-EXPECTS: FROM BASE UP EVEN THOUGH PROBLEM GoeS OTher WAY\
+\
+- SORTING (BACKTRACKING) --> (qsort lecture/starter 9b)\
+	- Pivot = first of list \
+	- break rest list into lesser/ greater than pivot eg 6-> (list 1 4 2) (list 7 9 8)\
+	- then recompile the list in order\
+\
+- STRUCTURAL VS GENERATIVE RECURSION (file 9c)\
+	- (sum (rest lon)), (fact (sub1 n))    VS     (sort <filter p>? (rest lon)), (scarpet (/ s 3)\
+	- ie SUBPART OF DATA DEF <---------> NOT SUBPART OF DATA DEF\
+	- therefore with gen rec we need to create a TERMINATION ARGUMENT\
+	\
+- do probs in (end 9c) and 9d\
+\
+
+\b \ul NOV 5th
+\b0 \ulnone \
+\
+- Big Ideas\
+	- arb-arity trees (review)\
+	- Backtracking search\
+	- Template Combo\
+		- gen recursion\
+		- structural rec (arb arty trees)\
+		- backtracking\
+\
+\
+START: sudoku.rkt (brute force, video)\
+	- backtracking search, pro stops when finds a solution\
+	- no "left/right" children, just a board\
+	- finds first blank, 
+\b generates 9 boards
+\b0  (gen rec), each with a different number in it (1-9)\
+	- i.e. first board "are there any blanks?", "yes there are".\
+	- after first 9board gen check for board validity\
+	- once it finds 1st valid board, finds next blank and gens next 9 boards\
+	- if gets to bottom, no 9 boards are valid, means parent isn't valid, backtracks to next blank of 2 levels up\
+	- GENERATIVE RECURSION + BACKTRACKING = BRUTE FORCE SEARCH\
+	- DATA DEFS - board is list of 81 values\
+				- 0, 8 rows_cols\
+	- work in file (template)\
+	- REFERTO scan of color coded underline (PIAZZA)\
+- arb arity/ gen rec, no backtrack (pset9 #2)}

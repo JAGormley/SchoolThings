@@ -1,0 +1,122 @@
+package ubc.cs.cpsc210.sustainabilityapp.webservices;
+
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.BasicResponseHandler;
+import org.apache.http.impl.client.DefaultHttpClient;
+
+
+
+public class FlickrService {
+	// Project Phase Two : TODO you need to complete the implementation of this class
+
+    private static final String API_KEY = "e3041c485fd6b7335966dde25f5d6c06";
+    //private static final String secret = "7a29e5409da762dc"; // To use for authentication (optional)
+    private static final String RESOURCE_URL = "http://api.flickr.com/services/rest/?";
+
+    /**
+	 * Requires: A non-empty tag and value latitude and longitudes
+	 * Effects: Returns the body of the response from Flickr API method flickr.photos.search in JSON format
+	 * @param tag, latitude, longitude
+	 */
+    public String search(String tag, double latitude, double longitude) throws IOException {
+    	System.out.println("Entering FlickrService.search...");
+    	// TODO Project Phase Two : implement this method
+    	String url = RESOURCE_URL                   + 
+    			     "&method=flickr.photos.search" + // using Flickr API method photos.search
+    			     "&api_key=" + API_KEY          +
+    	             "&tags=" + tag                 + 
+    	             "&lat="  + latitude            + 
+    	             "&lon="  + longitude           + 
+    	             "&format=json"                 ;
+    	
+
+    	try {
+			ResponseHandler<String> responseHandler = new BasicResponseHandler();
+			HttpClient client = new DefaultHttpClient();
+			URI uri = new URI(url);                                      //Make the url string into a URI (Hint #1)
+			HttpGet request = new HttpGet(uri);                          //Make the URL into an HTTP Get request (Hint #2)
+			String response = client.execute(request, responseHandler);  //Send a HTTP Get request to the yournavigation API using the client object (Hint #3)
+			if (response == null) {  // for debugging in Logcat
+				System.out.println("null returned from client.execute in FlickrService.search!!");
+			}
+			//System.out.println("response in FlickrService.search: " + response);
+			System.out.println("Exiting FlickrService.search...");
+			return response;
+		} catch (URISyntaxException e) {
+			System.out.println("URISyntaxException caught in FlickrService.parse");
+			e.printStackTrace();
+		}
+    	System.out.println("returned null from FlickrService.search call\n" +"Exiting FlickrService.search...");
+    	return null;
+    	
+    }
+    
+    /**
+	 * Requires: A non-empty photoID
+	 * Effects: Returns the body of the response from Flickr API method flickr.photos.geo.getLocation
+	 * @param photoID
+	 */
+    public static String getLocation(String photoID) throws IOException {
+    	System.out.println("Entering FlickrService.getLocation...");
+    	// TODO Project Phase Two : Implement this method
+
+    	String url =   RESOURCE_URL                        + 
+			       "&method=flickr.photos.geo.getLocation" + //using FLickr API method photos.geo.getLocation
+			       "&api_key="  + API_KEY                   +
+			       "&photo_id=" + photoID                  + 
+	               "&format=json"                          ;
+	
+
+<<<<<<< .mine
+	try {
+		ResponseHandler<String> responseHandler = new BasicResponseHandler();
+		HttpClient client = new DefaultHttpClient();
+		URI uri = new URI(url);                                      //Make the url string into a URI (Hint #1)
+		HttpGet request = new HttpGet(uri);                          //Make the URL into an HTTP Get request (Hint #2)
+		String response = client.execute(request, responseHandler);  //Send a HTTP Get request to the yournavigation API using the client object (Hint #3)
+		if (response == null) {  // for debugging in Logcat
+			System.out.println("null returned from client.execute in FlickrService.getLocation!!");
+		} else { 
+			System.out.println("response in FlickrService.getLocation: " + response);
+		}
+		
+		return response;
+		
+	} catch (URISyntaxException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	System.out.println("returned null from FlickrService.getLocation call");
+	return null;
+=======
+    	try {
+    		ResponseHandler<String> responseHandler = new BasicResponseHandler();
+    		HttpClient client = new DefaultHttpClient();
+    		URI uri = new URI(url);                                      //Make the url string into a URI (Hint #1)
+    		HttpGet request = new HttpGet(uri);                          //Make the URL into an HTTP Get request (Hint #2)
+    		String response = client.execute(request, responseHandler);  //Send a HTTP Get request to the yournavigation API using the client object (Hint #3)
+    		if (response == null) {  // for debugging in Logcat
+    			System.out.println("null returned from client.execute in FlickrService.getLocation!!");
+    		} else { 
+    			System.out.println("response in FlickrService.getLocation: " + response);
+    		}
+    		System.out.println("Exiting FlickrService.getLocation...");
+    		return response;
+    	} catch (URISyntaxException e) {
+    		System.out.println("Caught URISyntacException in FlickrService.getLocation");
+    		e.printStackTrace();
+    	}
+    	System.out.println("returned null from FlickrService.getLocation call");
+    	System.out.println("Exiting FlickrService.getLocation...");
+    	return null;
+>>>>>>> .r12722
+    }
+
+
+
+}

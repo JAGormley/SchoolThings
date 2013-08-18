@@ -1,0 +1,43 @@
+package ubc.cs.cpsc210.sustainabilityapp.webservices;
+
+import java.util.LinkedList;
+
+import java.util.List;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+
+import ubc.cs.cpsc210.sustainabilityapp.model.Photograph;
+import ubc.cs.cpsc210.sustainabilityapp.model.LatLong;
+
+public class FlickrParser {
+	// Project Phase Two : TODO you need to complete the implementation of this class
+	
+    public static List<Photograph> parse(String response) {
+        LinkedList<Photograph> photoIDs = new LinkedList<Photograph>();
+        
+        JSONObject obj = (JSONObject) JSONValue.parse(getJSONFromResponse(response));
+
+		// TODO Project Phase Two : Now that you have a String that represents a JSONObject,
+        // parse the string to return a List of Photographs
+        
+        return null;
+        
+    }
+    
+    private static LatLong parseLocation(String response){
+    	String json = getJSONFromResponse(response);
+
+    	// TODO Project Phase Two : Now that you have a String that represents a JSON Object,
+    	// parse the string and return the LatLong 
+    	
+    	return null;
+    }
+    
+    private static String getJSONFromResponse(String response){
+    	return response.substring(14, response.length() -1);
+    }
+    
+}
+

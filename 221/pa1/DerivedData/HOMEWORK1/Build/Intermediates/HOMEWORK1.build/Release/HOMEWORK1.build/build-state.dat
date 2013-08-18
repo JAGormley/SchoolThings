@@ -1,0 +1,92 @@
+THOMEWORK1
+v5
+r1
+cCheck dependencies
+cCompileC DerivedData/HOMEWORK1/Build/Intermediates/HOMEWORK1.build/Release/HOMEWORK1.build/Objects-normal/x86_64/main.o /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/HOMEWORK1/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Products/Release/HOMEWORK1 normal x86_64
+cGenerateDSYMFile /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Products/Release/HOMEWORK1.dSYM /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Products/Release/HOMEWORK1
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
+c000000005130312F00000000000000AA
+t1362112815
+s170
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/stdio.h
+c0000000051919A380000000000004523
+t1368496696
+s17699
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/string.h
+c0000000051919A380000000000001A3A
+t1368496696
+s6714
+
+N/Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Intermediates/HOMEWORK1.build/Release/HOMEWORK1.build/Objects-normal/x86_64/HOMEWORK1.LinkFileList
+c0000000051B10F3400000000000000A5
+t1370558260
+s165
+
+N/Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Intermediates/HOMEWORK1.build/Release/HOMEWORK1.build/Objects-normal/x86_64/main.o
+t2
+s0
+
+N/Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Products/Release/HOMEWORK1
+t2
+s0
+
+N/Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Products/Release/HOMEWORK1.dSYM
+t2
+s0
+
+N/Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/HOMEWORK1/main.cpp
+c0000000051B10F3300000000000010CC
+t1370558259
+s4300
+i<string>
+i<iostream>
+i<cstdlib>
+i<string.h>
+i<fstream>
+i<stdio.h>
+i<stack>
+i<vector>
+
+CBuild AST from /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/HOMEWORK1/main.cpp
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies2bbf6cb44661b741^10e987b44661b741^---0#1#0#--18"Check dependencies36"692EBAE8-9C34-4C96-93EB-3A63168FC96C-
+
+CCompileC DerivedData/HOMEWORK1/Build/Intermediates/HOMEWORK1.build/Release/HOMEWORK1.build/Objects-normal/x86_64/main.o /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/HOMEWORK1/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s392251060.439787
+e392251064.452395
+r1
+xCompileC
+xDerivedData/HOMEWORK1/Build/Intermediates/HOMEWORK1.build/Release/HOMEWORK1.build/Objects-normal/x86_64/main.o
+x/Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/HOMEWORK1/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/HOMEWORK1/main.cpp37fe70b44661b741^bde073b84661b741^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/HOMEWORK1/main.cpp0000000000000000^3405"CompileC DerivedData/HOMEWORK1/Build/Intermediates/HOMEWORK1.build/Release/HOMEWORK1.build/Objects-normal/x86_64/main.o HOMEWORK1/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Intermediates/HOMEWORK1.build/Release/HOMEWORK1.build/HOMEWORK1-generated-files.hmap -I/Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Intermediates/HOMEWORK1.build/Release/HOMEWORK1.build/HOMEWORK1-own-target-headers.hmap -I/Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Intermediates/HOMEWORK1.build/Release/HOMEWORK1.build/HOMEWORK1-all-target-headers.hmap -iquote /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Intermediates/HOMEWORK1.build/Release/HOMEWORK1.build/HOMEWORK1-project-headers.hmap -I/Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Products/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Intermediates/HOMEWORK1.build/Release/HOMEWORK1.build/DerivedSources/x86_64 -I/Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Intermediates/HOMEWORK1.build/Release/HOMEWORK1.build/DerivedSources -F/Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Products/Release -MMD -MT dependencies -MF /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Intermediates/HOMEWORK1.build/Release/HOMEWORK1.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Intermediates/HOMEWORK1.build/Release/HOMEWORK1.build/Objects-normal/x86_64/main.dia -c /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/HOMEWORK1/main.cpp -o /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Intermediates/HOMEWORK1.build/Release/HOMEWORK1.build/Objects-normal/x86_64/main.o36"50457E15-B991-4BB8-925B-C74D9D9A4E0B-
+
+CGenerateDSYMFile /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Products/Release/HOMEWORK1.dSYM /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Products/Release/HOMEWORK1
+s392251064.668169
+e392251064.732962
+r1
+xGenerateDSYMFile
+x/Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Products/Release/HOMEWORK1.dSYM
+x/Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Products/Release/HOMEWORK1
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection122"Generate /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Products/Release/HOMEWORK1.dSYM7d22abb84661b741^b7b7bbb84661b741^---0#0#0#-19%DVTDocumentLocation2@129"file://localhost/Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Products/Release/HOMEWORK1.dSYM000000000080d041^519"GenerateDSYMFile DerivedData/HOMEWORK1/Build/Products/Release/HOMEWORK1.dSYM DerivedData/HOMEWORK1/Build/Products/Release/HOMEWORK1    cd /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Products/Release/HOMEWORK1 -o /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Products/Release/HOMEWORK1.dSYM36"95FAEA2F-B39E-4B0F-A69C-0908927C02F8-
+
+CLd /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Products/Release/HOMEWORK1 normal x86_64
+s392251064.459499
+e392251064.633481
+r1
+xLd
+x/Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Products/Release/HOMEWORK1
+xnormal
+xx86_64
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Link /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Products/Release/HOMEWORK1a1ba75b84661b741^38f4a2b84661b741^---0#0#0#--941"Ld DerivedData/HOMEWORK1/Build/Products/Release/HOMEWORK1 normal x86_64    cd /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1    setenv MACOSX_DEPLOYMENT_TARGET 10.8    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Products/Release -F/Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Products/Release -filelist /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Intermediates/HOMEWORK1.build/Release/HOMEWORK1.build/Objects-normal/x86_64/HOMEWORK1.LinkFileList -mmacosx-version-min=10.8 -stdlib=libc++ -o /Users/andrewjgormley/Desktop/CPSC221/xcode/HOMEWORK1/DerivedData/HOMEWORK1/Build/Products/Release/HOMEWORK136"0262BC01-6BED-449E-863D-90E0C18B88CC-
+

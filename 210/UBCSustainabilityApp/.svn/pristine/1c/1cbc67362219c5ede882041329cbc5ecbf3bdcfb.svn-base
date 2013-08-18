@@ -1,0 +1,52 @@
+package ubc.cs.cpsc210.sustainabilityapp.webservices;
+
+import org.scribe.model.*;
+
+
+
+public class FlickrService {
+	// Project Phase Two : TODO you need to complete the implementation of this class
+	
+	
+	// Replace this with your own api key 
+    private static final String apiKey = "e3041c485fd6b7335966dde25f5d6c06";
+    private static final String secret = "7a29e5409da762dc";
+
+    
+    /**
+	 * 
+	 * <br><br>
+	 * <b>Requires:</b><br> A non-empty tag and valud latitude and longitudes<br><br>
+	 * <b>Effects:</b><br>Returns the body of the response from Flickr
+	 * @param tag, latitude, longitude
+	 */
+    public String search(String tag, double latitude, double longitude) {
+    	// TODO Project Phase Two : implement this method
+    	
+    	// Hint: You will want to look at the Flickr API to determine which method to call
+    	//       http://www.flickr.com/services/api/
+    	// Hint2: You may find it useful to use org.scribe.model.OAuthRequest. You do not have to
+    	//        use this class
+    	// Hint3: Make sure to specify that you want the response in json format
+    	
+    	return null;
+    }
+    
+    /**
+	 * 
+	 * <br><br>
+	 * <b>Requires:</b><br> A non-empty photoID<br><br>
+	 * <b>Effects:</b><br>Returns the body of the response from Flickr
+	 * @param photoID
+	 */
+    public static String getLocation(String photoID){
+    	// TODO Project Phase Two : Implement this method
+    	
+    	// Hint: Make sure to specify that you want the response in json format
+    	
+    	return null;
+    }
+
+
+
+}

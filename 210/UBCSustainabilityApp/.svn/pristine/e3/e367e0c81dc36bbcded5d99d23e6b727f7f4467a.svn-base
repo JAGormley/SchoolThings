@@ -1,0 +1,106 @@
+package ubc.cs.cpsc210.sustainabilityapp.webservices;
+
+import java.util.LinkedList;
+
+import java.util.List;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+
+import ubc.cs.cpsc210.sustainabilityapp.model.Photograph;
+import ubc.cs.cpsc210.sustainabilityapp.model.LatLong;
+
+public class FlickrParser {
+	// Project Phase Two : TODO you need to complete the implementation of this class
+	
+    public static List<Photograph> parse(String response) {
+    	System.out.println("Entering FlickrParser...");
+        LinkedList<Photograph> photoIDs = new LinkedList<Photograph>();
+        
+        JSONObject obj = (JSONObject) JSONValue.parse(getJSONFromResponse(response));
+
+		// TODO Project Phase Two : Now that you have a String that represents a JSONObject,
+        // parse the string to return a List of Photographs
+        JSONObject photosObj = (JSONObject)       obj.get("photos"); //get method inherited from HashMap
+        //System.out.println("photosObj: " + photosObj);
+        JSONArray  photoArr  = (JSONArray)  photosObj.get("photo");  //JSONArray is sublass of ArrayList
+        //System.out.println("photoArr: "+photoArr);
+        System.out.println("photoIDs before loop: " + photoIDs);
+    	//System.out.println("Entering photoArr loop...");
+
+        for (int i=0; i < photoArr.size(); i++) {
+        	JSONObject photo = (JSONObject) photoArr.get(i);
+            //System.out.println(photo);
+        	String id          = String.valueOf(photo.get("id"));
+            String displayName = String.valueOf(photo.get("title"));
+            String farm        = String.valueOf(photo.get("farm")); //convert int to string
+            String secret      = String.valueOf(photo.get("secret"));
+            String owner       = String.valueOf(photo.get("owner"));
+            String server      = String.valueOf(photo.get("server"));
+            
+            photoIDs.add(new Photograph(id, displayName, farm, secret, owner, server));
+            
+        }
+        //System.out.println("photoIDs after loop: " + photoIDs);
+        //System.out.println(photoIDs.get(0).getDisplayName() + "\n" + photoIDs.get(0).getURL() + "\n"+ photoIDs.get(0).getDescription());
+        System.out.println("Exiting FlickrParser...");
+        
+        // NEED TO DO SOMETHING LIKE THIS TO SET THE LATLONGS:
+//      for (Photograph photo: photoIDs){
+//      	photo.setLatLong(parseLocation(response));
+//      }
+        return photoIDs;
+    	//return null;
+//      // Getting error with following loop
+//      for( JSONObject photo : photoArr) {
+//    	String id          = (String) photo.get("id");
+//        String displayName = (String) photo.get("title");
+//        String farm        = (String) photo.get("farm");
+//        String secret      = (String) photo.get("secret");
+//        String owner       = (String) photo.get("owner");
+//        String server      = (String) photo.get("server");
+//        photoIDs.add(new Photograph(id, displayName, farm, secret, owner, server));
+//    	
+//    }
+    }
+    
+    private static LatLong parseLocation(String response){ 
+    	System.out.println("Entered FlickrParser.parseLocation...");
+    	String json = getJSONFromResponse(response);
+
+    	// TODO Project Phase Two : Now that you have a String that represents a JSON Object,
+    	// parse the string and return the LatLong 
+    	JSONObject obj         = (JSONObject) JSONValue.parse(json);
+    	System.out.println("obj: "+ obj);
+        JSONObject photoObj    = (JSONObject)      obj.get("photo");     //JSONObject is subclass of HashMap, use get method
+        System.out.println("photoObj: "+ photoObj);
+        JSONObject locationObj = (JSONObject) photoObj.get("location");
+        System.out.println("locationObj: "+ locationObj);
+        Double lat             = (Double)  locationObj.get("latitude");
+        System.out.println("lat: "+ lat);
+        Double lon             = (Double)  locationObj.get("longitude");
+        System.out.println("lon: "+ lon);
+        		
+        LatLong result = new LatLong(lat, lon);
+        System.out.println("result: "+ result);
+        System.out.println("Exiting FlickrParser.parseLocation...");
+        return result;
+        
+
+    }
+    
+    private static String getJSONFromResponse(String response){
+    	return response.substring(14, response.length() -1);
+    }
+    
+    
+    ///////// Code below is for TestFlickrParser JUnit testing purposes
+    static JSONObject parseLocationPhoto(String response){ 
+    	String json = getJSONFromResponse(response);
+    	JSONObject obj = (JSONObject) JSONValue.parse(json);
+    	return obj;
+    }
+    
+}
+

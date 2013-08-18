@@ -1,0 +1,46 @@
+package ubc.cs.cpsc210.sustainabilityapp.webservices;
+
+import static org.junit.Assert.*;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import ubc.cs.cpsc210.sustainabilityapp.model.Photograph;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+
+public class TestFlickrParser {
+
+	private FlickrService flickrService;
+	private String flickrResult;
+	
+	@Before
+	public void setUp() {
+		flickrService = new FlickrService();
+	}
+
+	@Test
+	public void testNumPhotos()  {
+
+		try {
+			flickrResult = flickrService.getLocation("7424030212");
+			if (flickrResult != null && flickrResult.length() > 0) {
+				JSONObject photo = FlickrParser.parseLocationPhoto(flickrResult);
+				System.out.println("photo: " + photo);
+				assertEquals(photo.size(), 7);
+			}
+			
+		} catch (IOException e) {
+			System.out.println("Caught IOException\n");
+			e.printStackTrace();
+		}
+
+	}
+
+}

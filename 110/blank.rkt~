@@ -1,0 +1,16 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname blank) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ())))
+(define-struct snake (dir head))
+;; Snake is (make-snake Integer[0, 10] Integer[0, 10])
+;; interp. the direction and location of the snake
+
+(define S1 (make-snake 5 5))
+
+(define (fn-for-snake s)
+  (... (snake-dir s)
+       (snake-head s)))
+;; Template rules used:
+;; compound: 2 selectors
+;; - snake-dir is: Integer[0, 10]
+;; - snake-head is: Integer[0, 10]
