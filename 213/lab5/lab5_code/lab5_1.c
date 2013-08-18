@@ -1,0 +1,30 @@
+
+/* Initiallize your array and n the same way in 
+your data section of youe sm213 code */
+
+int a[] = { 7, 5, 3, 1, 4, 8, 6, 8 };
+int n = 8;
+int p;
+
+/* Translate the following two functions and the main program */
+/* Note: When a function returns a value, 
+         it leaves that value in register r0  */ 
+void shuffle() {
+  int i;
+  for(i = 0; i < (n/2); i++) {
+	int t = a[i];
+	a[i] = a[n - i - 1];
+	a[n - i - 1] = t;
+  }
+}
+
+
+int pick() {
+	int s = (a[n/2] + a[n/4]) / 2;
+	return s;
+}
+
+void main() {
+	shuffle();
+	p = pick();
+}

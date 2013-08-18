@@ -1,0 +1,1 @@
+#include <stdlib.h>int *c;void foo () {  // ...  c = (int *) malloc (10*sizeof(int));  // ...  *c = 0;  *(c+1) = 1;  c[2] = c[1];  *(c+3) = *(c+2);  // ...  // CAN'T DO THIS IN JAVA  *c = (int) (c+3);  c = &c[3];  *c = *&c[3];  *&c = 0;  // ...}
