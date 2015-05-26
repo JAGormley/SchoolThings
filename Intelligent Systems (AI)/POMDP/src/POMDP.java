@@ -1,3 +1,6 @@
+/* POMDP Belief State Updater
+	 Andrew Gormley		       */
+
 import java.util.Scanner;
 
 // normalize, end states, sensor info (if col3&1 *.9, otherwise 1, OPPOSITE for non-col-3
